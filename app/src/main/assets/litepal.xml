@@ -9,5 +9,11 @@
     <version value="1"></version>
 
     <list>
+        <mapping class = "com.example.dell.litepaltest.Book"></mapping>
     </list>
+    <!--
+    <mapping>标签来声明我们要配置的映射模型类
+    注意，一定要使用完整的类名
+    不管有多少个模型类需要映射，都使用同样的方式配置在<list>标签下即可
+    -->
 </litepal>

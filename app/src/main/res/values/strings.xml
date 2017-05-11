@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">LitePalTest</string>
+    <string name="but1">Create database</string>
+    <string name="but2">Add Data</string>
+    <string name="but3">Update Data</string>
+    <string name="but4">Delete Data</string>
+    <string name="but5">Query Data</string>
 </resources>
