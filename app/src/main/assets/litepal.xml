@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="BookStore"></dbname>
+    <!--
+    <dbname>标签指定数据库名
+    <version>标签用于指定数据库版本号
+    <list>标签用于指定所有的映射模型
+    -->
+    <version value="1"></version>
+
+    <list>
+    </list>
+</litepal>
