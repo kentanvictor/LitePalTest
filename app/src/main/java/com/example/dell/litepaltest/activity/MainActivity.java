@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 DataSupport.deleteAll(Book.class,"price< ?","15");
+                //如果不指定约束条件就意味着你要删除表中的所有数据
             }
         });
         //删除数据
