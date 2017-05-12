@@ -43,13 +43,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Book book = new Book();
-                book.setName("The Lost Symbol");
+                book.setPrice(14.95);
+                book.setPress("Author");
+                book.updateAll("name = ? and author = ?","The Lost Symbol","Dan Brown");
+                /**
+                 * updateAll()方法中可以指定一个条件约束
+                 * 和SQliteDatabase中update()方法的where参数部分有点类似，但更加简洁
+                 * 如果不指定数据的话，就会更新全部数据
+                * */
+               /* book.setName("The Lost Symbol");
                 book.setAuthor("Dan Brown");
                 book.setPages(510);
                 book.setPrice(19.95);
                 book.setPress("Unknow");
+                book.save();
                 book.setPrice(10.99);
                 book.save();
+                上面这种是最简单最简单，最不用动脑的方法
+                */
             }
         });
         //更新数据
