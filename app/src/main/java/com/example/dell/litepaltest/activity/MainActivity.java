@@ -2,6 +2,7 @@ package com.example.dell.litepaltest.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -10,6 +11,8 @@ import com.example.dell.litepaltest.surface.Book;
 
 import org.litepal.crud.DataSupport;
 import org.litepal.tablemanager.Connector;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -74,5 +77,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //删除数据
+        Button queryButton = (Button) findViewById(R.id.query_data);
+        queryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                List<Book> books = DataSupport.findAll(Book.class);
+                for(Book book : books)
+                {
+                    Log.d("MainActivity","book name is " + book.getName());
+                    Log.d("MainActivity","book author is " + book.getAuthor());
+                    Log.d("MainActivity","book pages is " + book.getPages());
+                    Log.d("MainActivity","book price is " + book.getPrice());
+                    Log.d("MainActivity","book press is " + book.getPress());
+                }
+            }
+        });
+        //使用LitePal查询数据
     }
 }
