@@ -4,7 +4,9 @@ package com.example.dell.litepaltest.surface;
  * Created by DELL on 2017/5/11.
  */
 
-public class Book {
+import org.litepal.crud.DataSupport;
+
+public class Book extends DataSupport{
     private int id;
     private String author;
     private double price;
