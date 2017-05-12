@@ -8,6 +8,7 @@ import android.widget.Button;
 import com.example.dell.litepaltest.R;
 import com.example.dell.litepaltest.surface.Book;
 
+import org.litepal.crud.DataSupport;
 import org.litepal.tablemanager.Connector;
 
 public class MainActivity extends AppCompatActivity {
@@ -64,5 +65,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //更新数据
+        Button deleteButton = (Button) findViewById(R.id.delete_data);
+        deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DataSupport.deleteAll(Book.class,"price< ?","15");
+            }
+        });
+        //删除数据
     }
 }
