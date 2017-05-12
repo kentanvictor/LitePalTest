@@ -38,5 +38,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //添加数据
+        Button updateData = (Button) findViewById(R.id.update_data);
+        updateData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Book book = new Book();
+                book.setName("The Lost Symbol");
+                book.setAuthor("Dan Brown");
+                book.setPages(510);
+                book.setPrice(19.95);
+                book.setPress("Unknow");
+                book.setPrice(10.99);
+                book.save();
+            }
+        });
+        //更新数据
     }
 }
