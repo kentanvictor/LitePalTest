@@ -10,6 +10,15 @@ public class Book {
     private double price;
     private int pages;
     private String name;
+    private String press;
+    public String getPress()
+    {
+        return press;
+    }
+    public void setPress(String press)
+    {
+        this.press = press;
+    }
     public int getId()
     {
         return id;

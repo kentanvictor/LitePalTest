@@ -10,6 +10,7 @@
 
     <list>
         <mapping class = "com.example.dell.litepaltest.Book"></mapping>
+        <mapping class="com.example.dell.litepaltest.Category"></mapping>
     </list>
     <!--
     <mapping>标签来声明我们要配置的映射模型类
