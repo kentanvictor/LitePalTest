@@ -49,12 +49,12 @@ public class MainActivity extends AppCompatActivity {
                 Book book = new Book();
                 book.setPrice(14.95);
                 book.setPress("Author");
-                book.updateAll("name = ? and author = ?","The Lost Symbol","Dan Brown");
+                book.updateAll("name = ? and author = ?", "The Lost Symbol", "Dan Brown");
                 /**
                  * updateAll()方法中可以指定一个条件约束
                  * 和SQliteDatabase中update()方法的where参数部分有点类似，但更加简洁
                  * 如果不指定数据的话，就会更新全部数据
-                * */
+                 * */
                /* book.setName("The Lost Symbol");
                 book.setAuthor("Dan Brown");
                 book.setPages(510);
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DataSupport.deleteAll(Book.class,"price< ?","15");
+                DataSupport.deleteAll(Book.class, "price< ?", "15");
                 //如果不指定约束条件就意味着你要删除表中的所有数据
             }
         });
@@ -82,13 +82,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 List<Book> books = DataSupport.findAll(Book.class);
-                for(Book book : books)
-                {
-                    Log.d("MainActivity","book name is " + book.getName());
-                    Log.d("MainActivity","book author is " + book.getAuthor());
-                    Log.d("MainActivity","book pages is " + book.getPages());
-                    Log.d("MainActivity","book price is " + book.getPrice());
-                    Log.d("MainActivity","book press is " + book.getPress());
+                for (Book book : books) {
+                    Log.d("MainActivity", "book name is " + book.getName());
+                    Log.d("MainActivity", "book author is " + book.getAuthor());
+                    Log.d("MainActivity", "book pages is " + book.getPages());
+                    Log.d("MainActivity", "book price is " + book.getPrice());
+                    Log.d("MainActivity", "book press is " + book.getPress());
                 }
             }
         });
