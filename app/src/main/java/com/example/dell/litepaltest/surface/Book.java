@@ -6,59 +6,59 @@ package com.example.dell.litepaltest.surface;
 
 import org.litepal.crud.DataSupport;
 
-public class Book extends DataSupport{
+public class Book extends DataSupport {
     private int id;
     private String author;
     private double price;
     private int pages;
     private String name;
     private String press;
-    public String getPress()
-    {
+
+    public String getPress() {
         return press;
     }
-    public void setPress(String press)
-    {
+
+    public void setPress(String press) {
         this.press = press;
     }
-    public int getId()
-    {
+
+    public int getId() {
         return id;
     }
-    public void setId(int id)
-    {
+
+    public void setId(int id) {
         this.id = id;
     }
-    public String getAuthor()
-    {
+
+    public String getAuthor() {
         return author;
     }
-    public void setAuthor(String author)
-    {
+
+    public void setAuthor(String author) {
         this.author = author;
     }
-    public double getPrice()
-    {
+
+    public double getPrice() {
         return price;
     }
-    public void setPrice(double price)
-    {
+
+    public void setPrice(double price) {
         this.price = price;
     }
-    public int getPages()
-    {
+
+    public int getPages() {
         return pages;
     }
-    public void setPages(int pages)
-    {
+
+    public void setPages(int pages) {
         this.pages = pages;
     }
-    public String getName()
-    {
+
+    public String getName() {
         return name;
     }
-    public void setName(String name)
-    {
+
+    public void setName(String name) {
         this.name = name;
     }
 }
